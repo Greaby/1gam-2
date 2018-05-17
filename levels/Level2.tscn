@@ -2,7 +2,7 @@
 
 [ext_resource path="res://tileset/World.tres" type="TileSet" id=1]
 [ext_resource path="res://levels/Finish.tscn" type="PackedScene" id=2]
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/Human.tscn" type="PackedScene" id=3]
 
 [node name="Level2" type="Node2D"]
 
@@ -35,5 +35,6 @@ position = Vector2( 108.302, 59.9084 )
 [node name="Player" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 77.9443, 538.846 )
+is_possessed = true
 
 

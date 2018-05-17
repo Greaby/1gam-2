@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/level-basique.png-0d6550c804b10a82c1deee0ad8988efc.stex"
+path="res://.import/underworld.png-db8f9a981d6b760952ee7d724989536d.stex"
 
 [deps]
 
-source_file="res://tileset/level-basique.png"
-source_md5="ad3f6f7de80c473f8c18bbed28e88633"
+source_file="res://tileset/assets/underworld.png"
+source_md5="181aae4e2186c2788bf4f540f6595279"
 
-dest_files=[ "res://.import/level-basique.png-0d6550c804b10a82c1deee0ad8988efc.stex" ]
-dest_md5="044324158e7bb047e974a466836cde94"
+dest_files=[ "res://.import/underworld.png-db8f9a981d6b760952ee7d724989536d.stex" ]
+dest_md5="4daf30efce0bcf177c9edc00fcbbe557"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

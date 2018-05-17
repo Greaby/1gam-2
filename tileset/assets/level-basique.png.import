@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player.png-5262c6d47c932fbaaca112fe33671111.stex"
+path="res://.import/level-basique.png-9fc19bca5e9fefd1b8aa850f8552ae41.stex"
 
 [deps]
 
-source_file="res://player/assets/player.png"
-source_md5="65f41e1a1db646c54a67b4ac8f7dc3cd"
+source_file="res://tileset/assets/level-basique.png"
+source_md5="ad3f6f7de80c473f8c18bbed28e88633"
 
-dest_files=[ "res://.import/player.png-5262c6d47c932fbaaca112fe33671111.stex" ]
-dest_md5="dcc6a50c993aae4ab88e0bcd2113c8e7"
+dest_files=[ "res://.import/level-basique.png-9fc19bca5e9fefd1b8aa850f8552ae41.stex" ]
+dest_md5="044324158e7bb047e974a466836cde94"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
