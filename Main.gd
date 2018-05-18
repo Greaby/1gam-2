@@ -13,12 +13,21 @@ func _ready():
 
 func _load_next_level():
 	if levels.size() > 0:
-		for child in get_children():
+		for child in $Level.get_children():
 			child.queue_free()
 		
 		var scene = load(levels.pop_front())
 		var current_level = scene.instance()
 		
-		$".".add_child(current_level)
+		$Level.add_child(current_level)
+		
+		current_level.connect("switch_underworld", self, "_play_underworld_background")
+		current_level.connect("switch_world", self, "_play_world_background")
 		
 		current_level.find_node("Finish").connect("level_complete", self, "_load_next_level")
+		
+func _play_underworld_background():
+	$AnimationPlayer.play("underworld")
+	
+func _play_world_background():
+	$AnimationPlayer.play("world")

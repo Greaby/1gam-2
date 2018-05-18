@@ -10,7 +10,7 @@ source_file="res://tileset/assets/underworld.png"
 source_md5="181aae4e2186c2788bf4f540f6595279"
 
 dest_files=[ "res://.import/underworld.png-db8f9a981d6b760952ee7d724989536d.stex" ]
-dest_md5="4daf30efce0bcf177c9edc00fcbbe557"
+dest_md5="f13bf3047002cbe078f96ab784720bcd"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -7,10 +7,12 @@ export (int) var speed = 200
 var input_direction = Vector2()
 var velocity = Vector2()
 
-var contact = null
+var available_host = null
+
+var is_out = false
 
 func _physics_process(delta):
-	if(is_visible_in_tree()):
+	if(is_out):
 		input_direction = Vector2()
 	
 		input_direction.x = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
@@ -20,14 +22,34 @@ func _physics_process(delta):
 		
 		move_and_slide(velocity)
 		
-		if contact != null and Input.is_action_just_pressed("power"):
-			contact.is_possessed = true
-			$".".visible = false
-			emit_signal("enter_body")
-			
+		if available_host != null and Input.is_action_just_pressed("power"):
+			enter(available_host)
 
-func _on_Area2D_body_entered(body):
-	contact = body
+func enter(host):
+	host.is_possessed = true
+	is_out = false
+	visible = false
+	$AnimatedSprite.stop()
+	emit_signal("enter_body")
+			
+func out(host):
+	position = host.position
+	position.y -= 28
+	position.x -= 8
+	show()
+	$AnimatedSprite.animation = "out"
+	$AnimatedSprite.play()
+	$Scream.play()
+
+func _on_Area2D_body_entered(host):
+	available_host = host
 	
-func _on_Area2D_body_exited(body):
-	contact = null
+func _on_Area2D_body_exited(host):
+	available_host = null
+
+
+func _on_AnimatedSprite_animation_finished():
+	if $AnimatedSprite.animation != "idle":
+		is_out = true
+		$AnimatedSprite.animation = "idle"
+		$AnimatedSprite.play()

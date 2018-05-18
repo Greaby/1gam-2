@@ -28,6 +28,8 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2(0, -1))
 	
 func _die():
+	$AnimatedSprite.animation = "out"
+	$AnimatedSprite.play()
 	is_possessed = false
 	life_number -= 1
 	emit_signal("die")
