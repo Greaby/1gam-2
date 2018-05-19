@@ -1,35 +1,70 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://levels/Player.gd" type="Script" id=1]
-[ext_resource path="res://characters/assets/human-out1.png" type="Texture" id=2]
-[ext_resource path="res://characters/assets/human-out2.png" type="Texture" id=3]
-[ext_resource path="res://characters/assets/human-out3.png" type="Texture" id=4]
-[ext_resource path="res://characters/assets/human-out4.png" type="Texture" id=5]
-[ext_resource path="res://characters/assets/human-out5.png" type="Texture" id=6]
-[ext_resource path="res://characters/assets/human-out6.png" type="Texture" id=7]
-[ext_resource path="res://characters/assets/human-out7.png" type="Texture" id=8]
-[ext_resource path="res://characters/assets/human-out8.png" type="Texture" id=9]
+[ext_resource path="res://characters/assets/human/jump/human-jump1.png" type="Texture" id=2]
+[ext_resource path="res://characters/assets/human/jump/human-jump2.png" type="Texture" id=3]
+[ext_resource path="res://characters/assets/human/jump/human-jump3.png" type="Texture" id=4]
+[ext_resource path="res://characters/assets/human/fall/human-fall1.png" type="Texture" id=5]
+[ext_resource path="res://characters/assets/human/fall/human-fall2.png" type="Texture" id=6]
+[ext_resource path="res://characters/assets/human/walk/human-walk1.png" type="Texture" id=7]
+[ext_resource path="res://characters/assets/human/walk/human-walk2.png" type="Texture" id=8]
+[ext_resource path="res://characters/assets/human/walk/human-walk3.png" type="Texture" id=9]
+[ext_resource path="res://characters/assets/human/walk/human-walk4.png" type="Texture" id=10]
+[ext_resource path="res://characters/assets/human/walk/human-walk5.png" type="Texture" id=11]
+[ext_resource path="res://characters/assets/human/walk/human-walk6.png" type="Texture" id=12]
+[ext_resource path="res://characters/assets/human/walk/human-walk7.png" type="Texture" id=13]
+[ext_resource path="res://characters/assets/human/walk/human-walk8.png" type="Texture" id=14]
+[ext_resource path="res://characters/assets/human-idle1.png" type="Texture" id=15]
+[ext_resource path="res://characters/assets/human-idle2.png" type="Texture" id=16]
+[ext_resource path="res://characters/assets/human-out1.png" type="Texture" id=17]
+[ext_resource path="res://characters/assets/human-out2.png" type="Texture" id=18]
+[ext_resource path="res://characters/assets/human-out3.png" type="Texture" id=19]
+[ext_resource path="res://characters/assets/human-out4.png" type="Texture" id=20]
+[ext_resource path="res://characters/assets/human-out5.png" type="Texture" id=21]
+[ext_resource path="res://characters/assets/human-out6.png" type="Texture" id=22]
+[ext_resource path="res://characters/assets/human-out7.png" type="Texture" id=23]
+[ext_resource path="res://characters/assets/human-out8.png" type="Texture" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 12, 16 )
+extents = Vector2( 8, 16 )
 
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "jump",
+"speed": 16.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "walk",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "idle",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
 "loop": false,
 "name": "out",
 "speed": 8.0
 } ]
 
-[node name="Human" type="KinematicBody2D"]
+[node name="Human" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -41,7 +76,7 @@ __meta__ = {
 "_edit_group_": true
 }
 speed = 200
-jump_speed = 600
+jump_speed = 400
 gravity = 20
 is_possessed = false
 life_number = 1
@@ -54,6 +89,8 @@ _sections_unfolded = [ "Material", "Transform", "Z Index" ]
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
 frames = SubResource( 2 )
-animation = "default"
+animation = "idle"
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 
 

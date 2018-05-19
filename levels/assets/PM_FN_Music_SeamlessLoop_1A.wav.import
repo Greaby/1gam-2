@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PM_FN_Music_SeamlessLoop_1A.wav-2efeb3cef9686bc09e4fdf7de3b1b948.sample"
+
+[deps]
+
+source_file="res://levels/assets/PM_FN_Music_SeamlessLoop_1A.wav"
+source_md5="1fbfc3c679bf8d34a88d366c2a549aa5"
+
+dest_files=[ "res://.import/PM_FN_Music_SeamlessLoop_1A.wav-2efeb3cef9686bc09e4fdf7de3b1b948.sample" ]
+dest_md5="cb11bc5f715a1c21ce42f769bb8f1d75"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

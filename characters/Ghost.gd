@@ -31,6 +31,7 @@ func enter(host):
 	visible = false
 	$AnimatedSprite.stop()
 	emit_signal("enter_body")
+	$EnterBody.play()
 			
 func out(host):
 	position = host.position

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://characters/Ghost.gd" type="Script" id=1]
 [ext_resource path="res://characters/assets/player.png" type="Texture" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://characters/assets/ghost-out8.png" type="Texture" id=26]
 [ext_resource path="res://characters/assets/ghost-out9.png" type="Texture" id=27]
 [ext_resource path="res://characters/assets/scream.wav" type="AudioStream" id=28]
+[ext_resource path="res://characters/enter_body.wav" type="AudioStream" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -58,7 +59,7 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[node name="Ghost" type="KinematicBody2D" index="0"]
+[node name="Ghost" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 2
@@ -102,6 +103,14 @@ playing = true
 [node name="Scream" type="AudioStreamPlayer" parent="." index="4"]
 
 stream = ExtResource( 28 )
+volume_db = -10.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="EnterBody" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 29 )
 volume_db = -10.0
 autoplay = false
 mix_target = 0
