@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/enter_body.wav-79a703e5a79c92849856b9057d0cef2e.sample"
+
+[deps]
+
+source_file="res://characters/assets/ghost/enter_body.wav"
+source_md5="51b7dd41167534a0ad63821d9145e43d"
+
+dest_files=[ "res://.import/enter_body.wav-79a703e5a79c92849856b9057d0cef2e.sample" ]
+dest_md5="4543169046d8daa7e2e81131c38e9542"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
