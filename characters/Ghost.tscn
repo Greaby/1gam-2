@@ -56,9 +56,14 @@ animations = [ {
 "loop": false,
 "name": "out",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ) ],
+"loop": false,
+"name": "in",
+"speed": 8.0
 } ]
 
-[node name="Ghost" type="KinematicBody2D" index="0"]
+[node name="Ghost" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 2

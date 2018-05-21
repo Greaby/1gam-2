@@ -49,9 +49,9 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 0.25, 0.25 ),
+"transitions": PoolRealArray( 1, 0.25 ),
 "update": 0,
-"values": [ -80.0, -15.0 ]
+"values": [ 0.0, -15.0 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("WorldBackground:volume_db")
@@ -97,7 +97,7 @@ tracks/1/keys = {
 "values": [ -15.0, -80.0 ]
 }
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -126,7 +126,7 @@ bus = "Master"
 [node name="UnderworldBackground" type="AudioStreamPlayer" parent="." index="3"]
 
 stream = ExtResource( 3 )
-volume_db = -80.0
+volume_db = 0.0
 autoplay = true
 mix_target = 0
 bus = "Master"

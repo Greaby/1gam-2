@@ -7,7 +7,7 @@ func _ready():
 	$Underworld.visible = false
 	$Ghost.visible = false
 	for human in $Humans.get_children():
-		human.connect("die", self, "_switch_underworld", [human])
+		human.connect("ghost_out", self, "_switch_underworld", [human])
 		
 	$Ghost.connect("enter_body", self, "_switch_world")
 	
@@ -18,6 +18,5 @@ func _switch_underworld(human):
 	
 func _switch_world():
 	emit_signal("switch_world")
-	$Ghost.hide()
 	$Underworld.hide()
 	
