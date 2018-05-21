@@ -69,9 +69,14 @@ animations = [ {
 "loop": true,
 "name": "fall",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "die",
+"speed": 8.0
 } ]
 
-[node name="Human" type="KinematicBody2D" index="0"]
+[node name="Human" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -83,7 +88,6 @@ speed = 200
 jump_speed = 400
 gravity = 20
 is_possessed = false
-life_number = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 

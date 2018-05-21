@@ -15,7 +15,6 @@ export (int) var gravity = 20
 var gravity_enable = true
 
 export (bool) var is_possessed = false
-export (int) var life_number = 1
 
 var input_direction = Vector2()
 var velocity = Vector2()
@@ -104,7 +103,15 @@ func _ghost_out():
 	$AnimatedSprite.play()
 	is_possessed = false
 	gravity_enable = false
-	life_number -= 1
+	
+	if has_node("Lives"):
+		if $Lives.get_children().size() > 0:
+			var life = $Lives.get_children().pop_back()
+			life.lost()
+		else:
+			$AnimatedSprite.animation = "die"
+			$AnimatedSprite.play()
+	
 	emit_signal("ghost_out")
 	
 func ghost_in():
@@ -119,3 +126,6 @@ func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "in":
 		_change_state(IDLE)
 		is_possessed = true
+		
+	if $AnimatedSprite.animation == "die":
+		queue_free()
