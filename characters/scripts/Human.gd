@@ -19,6 +19,8 @@ export (bool) var is_possessed = false
 var input_direction = Vector2()
 var velocity = Vector2()
 
+var available_object = null
+
 
 
 func _ready():
@@ -29,10 +31,13 @@ func _input(event):
 		return
 	
 	if event.is_action_pressed("jump") and state in [IDLE, WALK]:
-		_change_state(JUMP)
+		return _change_state(JUMP)
 	
+	if is_possessed and event.is_action_pressed("power") and available_object != null:
+		return available_object.activate()
+		
 	if is_possessed and event.is_action_pressed("power"):
-		_change_state(GHOST_OUT)
+		return _change_state(GHOST_OUT)
 	
 func _change_state(new_state):
 	match new_state:
@@ -129,3 +134,9 @@ func _on_AnimatedSprite_animation_finished():
 		
 	if $AnimatedSprite.animation == "die":
 		queue_free()
+
+func _on_ObjectDetection_area_entered(area):
+	available_object = area
+
+func _on_ObjectDetection_area_exited(area):
+	available_object = null

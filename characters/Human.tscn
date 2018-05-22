@@ -1,29 +1,29 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://characters/scripts/Human.gd" type="Script" id=1]
-[ext_resource path="res://characters/assets/human/idle/human-idle1.png" type="Texture" id=2]
-[ext_resource path="res://characters/assets/human/idle/human-idle2.png" type="Texture" id=3]
-[ext_resource path="res://characters/assets/human/out/human-out1.png" type="Texture" id=4]
-[ext_resource path="res://characters/assets/human/out/human-out2.png" type="Texture" id=5]
-[ext_resource path="res://characters/assets/human/out/human-out3.png" type="Texture" id=6]
-[ext_resource path="res://characters/assets/human/out/human-out4.png" type="Texture" id=7]
-[ext_resource path="res://characters/assets/human/out/human-out5.png" type="Texture" id=8]
-[ext_resource path="res://characters/assets/human/out/human-out6.png" type="Texture" id=9]
-[ext_resource path="res://characters/assets/human/out/human-out7.png" type="Texture" id=10]
-[ext_resource path="res://characters/assets/human/out/human-out8.png" type="Texture" id=11]
-[ext_resource path="res://characters/assets/human/walk/human-walk1.png" type="Texture" id=12]
-[ext_resource path="res://characters/assets/human/walk/human-walk2.png" type="Texture" id=13]
-[ext_resource path="res://characters/assets/human/walk/human-walk3.png" type="Texture" id=14]
-[ext_resource path="res://characters/assets/human/walk/human-walk4.png" type="Texture" id=15]
-[ext_resource path="res://characters/assets/human/walk/human-walk5.png" type="Texture" id=16]
-[ext_resource path="res://characters/assets/human/walk/human-walk6.png" type="Texture" id=17]
-[ext_resource path="res://characters/assets/human/walk/human-walk7.png" type="Texture" id=18]
-[ext_resource path="res://characters/assets/human/walk/human-walk8.png" type="Texture" id=19]
+[ext_resource path="res://characters/assets/human/walk/human-walk1.png" type="Texture" id=2]
+[ext_resource path="res://characters/assets/human/walk/human-walk2.png" type="Texture" id=3]
+[ext_resource path="res://characters/assets/human/walk/human-walk3.png" type="Texture" id=4]
+[ext_resource path="res://characters/assets/human/walk/human-walk4.png" type="Texture" id=5]
+[ext_resource path="res://characters/assets/human/walk/human-walk5.png" type="Texture" id=6]
+[ext_resource path="res://characters/assets/human/walk/human-walk6.png" type="Texture" id=7]
+[ext_resource path="res://characters/assets/human/walk/human-walk7.png" type="Texture" id=8]
+[ext_resource path="res://characters/assets/human/walk/human-walk8.png" type="Texture" id=9]
+[ext_resource path="res://characters/assets/human/fall/human-fall1.png" type="Texture" id=10]
+[ext_resource path="res://characters/assets/human/fall/human-fall2.png" type="Texture" id=11]
+[ext_resource path="res://characters/assets/human/out/human-out1.png" type="Texture" id=12]
+[ext_resource path="res://characters/assets/human/out/human-out2.png" type="Texture" id=13]
+[ext_resource path="res://characters/assets/human/out/human-out3.png" type="Texture" id=14]
+[ext_resource path="res://characters/assets/human/out/human-out4.png" type="Texture" id=15]
+[ext_resource path="res://characters/assets/human/out/human-out5.png" type="Texture" id=16]
+[ext_resource path="res://characters/assets/human/out/human-out6.png" type="Texture" id=17]
+[ext_resource path="res://characters/assets/human/out/human-out7.png" type="Texture" id=18]
+[ext_resource path="res://characters/assets/human/out/human-out8.png" type="Texture" id=19]
 [ext_resource path="res://characters/assets/human/jump/human-jump1.png" type="Texture" id=20]
 [ext_resource path="res://characters/assets/human/jump/human-jump2.png" type="Texture" id=21]
 [ext_resource path="res://characters/assets/human/jump/human-jump3.png" type="Texture" id=22]
-[ext_resource path="res://characters/assets/human/fall/human-fall1.png" type="Texture" id=23]
-[ext_resource path="res://characters/assets/human/fall/human-fall2.png" type="Texture" id=24]
+[ext_resource path="res://characters/assets/human/idle/human-idle1.png" type="Texture" id=23]
+[ext_resource path="res://characters/assets/human/idle/human-idle2.png" type="Texture" id=24]
 [ext_resource path="res://assets/ui/progress1.png" type="Texture" id=25]
 [ext_resource path="res://assets/ui/progress2.png" type="Texture" id=26]
 
@@ -32,33 +32,28 @@
 custom_solver_bias = 0.0
 extents = Vector2( 8, 16 )
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8, 16 )
+
+[sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "idle",
-"speed": 3.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": false,
-"name": "out",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": false,
-"name": "in",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "walk",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "die",
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": false,
@@ -67,12 +62,22 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 23 ), ExtResource( 24 ) ],
 "loop": true,
-"name": "fall",
+"name": "idle",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "die",
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": false,
+"name": "in",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": false,
+"name": "out",
 "speed": 8.0
 } ]
 
@@ -89,17 +94,34 @@ jump_speed = 400
 gravity = 20
 is_possessed = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+[node name="ObjectDetection" type="Area2D" parent="." index="0"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_mask = 16
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectDetection" index="0"]
 
 shape = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 2 )
 _sections_unfolded = [ "Material", "Transform", "Z Index" ]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
 
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "idle"
 
-[node name="ProgressBar" type="TextureProgress" parent="." index="2"]
+[node name="ProgressBar" type="TextureProgress" parent="." index="3"]
 
 visible = false
 anchor_left = 0.0
@@ -129,6 +151,14 @@ texture_progress = ExtResource( 26 )
 radial_fill_degrees = 360.0
 radial_center_offset = Vector2( 0, 0 )
 nine_patch_stretch = false
+
+[connection signal="area_entered" from="ObjectDetection" to="." method="_on_ObjectDetection_area_entered"]
+
+[connection signal="area_exited" from="ObjectDetection" to="." method="_on_ObjectDetection_area_exited"]
+
+[connection signal="body_entered" from="ObjectDetection" to="." method="_on_ObjectDetection_body_entered"]
+
+[connection signal="body_exited" from="ObjectDetection" to="." method="_on_ObjectDetection_body_exited"]
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 

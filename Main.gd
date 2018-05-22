@@ -22,9 +22,8 @@ func _load_next_level():
 		$Level.add_child(current_level)
 		
 		current_level.connect("switch_underworld", self, "_play_underworld_background")
-		current_level.connect("switch_world", self, "_play_world_background")
-		
-		current_level.find_node("Finish").connect("level_complete", self, "_load_next_level")
+		current_level.connect("switch_world", self, "_play_world_background")		
+		current_level.connect("level_complete", self, "_load_next_level")
 		
 func _play_underworld_background():
 	$AnimationPlayer.play("underworld")

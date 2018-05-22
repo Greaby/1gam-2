@@ -1,8 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
-[ext_resource path="res://levels/assets/PM_FN_Music_SeamlessLoop_1J.wav" type="AudioStream" id=2]
-[ext_resource path="res://levels/assets/PM_FN_Music_SeamlessLoop_1A.wav" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 
@@ -117,7 +115,7 @@ blend_times = [  ]
 
 [node name="WorldBackground" type="AudioStreamPlayer" parent="." index="2"]
 
-stream = ExtResource( 2 )
+stream = null
 volume_db = -15.0
 autoplay = true
 mix_target = 0
@@ -125,7 +123,7 @@ bus = "Master"
 
 [node name="UnderworldBackground" type="AudioStreamPlayer" parent="." index="3"]
 
-stream = ExtResource( 3 )
+stream = null
 volume_db = -80.0
 autoplay = true
 mix_target = 0
