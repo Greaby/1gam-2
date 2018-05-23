@@ -32,3 +32,9 @@ func activate():
 		BOTTOM:
 			_change_state(TOP)
 	
+
+func _on_Lever_area_entered(area):
+	$Outiline.show()
+	
+func _on_Lever_area_exited(area):
+	$Outiline.hide()
