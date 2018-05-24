@@ -24,6 +24,7 @@ var available_object = null
 
 
 func _ready():
+	$AnimationPlayer.play("default")
 	_change_state(IDLE)
 	
 func _input(event):
@@ -33,11 +34,15 @@ func _input(event):
 	if event.is_action_pressed("jump") and state in [IDLE, WALK]:
 		return _change_state(JUMP)
 	
-	if is_possessed and event.is_action_pressed("power") and available_object != null:
+	if event.is_action_pressed("power") and available_object != null:
 		return available_object.activate()
 		
-	if is_possessed and event.is_action_pressed("power"):
-		return _change_state(GHOST_OUT)
+	if event.is_action_pressed("power"):
+		return $DelayTimer.start()
+		
+	if event.is_action_released("power"):
+		$DelayTimer.stop()
+		$AnimationPlayer.play("default")
 	
 func _change_state(new_state):
 	match new_state:
@@ -140,3 +145,13 @@ func _on_ObjectDetection_area_entered(area):
 
 func _on_ObjectDetection_area_exited(area):
 	available_object = null
+
+
+func _on_DelayTimer_timeout():
+	$AnimationPlayer.play("progress")
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "progress":
+		$AnimationPlayer.play('default')
+		_change_state(GHOST_OUT)

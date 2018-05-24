@@ -1,29 +1,29 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://characters/scripts/Human.gd" type="Script" id=1]
-[ext_resource path="res://characters/assets/human/walk/human-walk1.png" type="Texture" id=2]
-[ext_resource path="res://characters/assets/human/walk/human-walk2.png" type="Texture" id=3]
-[ext_resource path="res://characters/assets/human/walk/human-walk3.png" type="Texture" id=4]
-[ext_resource path="res://characters/assets/human/walk/human-walk4.png" type="Texture" id=5]
-[ext_resource path="res://characters/assets/human/walk/human-walk5.png" type="Texture" id=6]
-[ext_resource path="res://characters/assets/human/walk/human-walk6.png" type="Texture" id=7]
-[ext_resource path="res://characters/assets/human/walk/human-walk7.png" type="Texture" id=8]
-[ext_resource path="res://characters/assets/human/walk/human-walk8.png" type="Texture" id=9]
-[ext_resource path="res://characters/assets/human/fall/human-fall1.png" type="Texture" id=10]
-[ext_resource path="res://characters/assets/human/fall/human-fall2.png" type="Texture" id=11]
-[ext_resource path="res://characters/assets/human/out/human-out1.png" type="Texture" id=12]
-[ext_resource path="res://characters/assets/human/out/human-out2.png" type="Texture" id=13]
-[ext_resource path="res://characters/assets/human/out/human-out3.png" type="Texture" id=14]
-[ext_resource path="res://characters/assets/human/out/human-out4.png" type="Texture" id=15]
-[ext_resource path="res://characters/assets/human/out/human-out5.png" type="Texture" id=16]
-[ext_resource path="res://characters/assets/human/out/human-out6.png" type="Texture" id=17]
-[ext_resource path="res://characters/assets/human/out/human-out7.png" type="Texture" id=18]
-[ext_resource path="res://characters/assets/human/out/human-out8.png" type="Texture" id=19]
-[ext_resource path="res://characters/assets/human/jump/human-jump1.png" type="Texture" id=20]
-[ext_resource path="res://characters/assets/human/jump/human-jump2.png" type="Texture" id=21]
-[ext_resource path="res://characters/assets/human/jump/human-jump3.png" type="Texture" id=22]
-[ext_resource path="res://characters/assets/human/idle/human-idle1.png" type="Texture" id=23]
-[ext_resource path="res://characters/assets/human/idle/human-idle2.png" type="Texture" id=24]
+[ext_resource path="res://characters/assets/human/idle/human-idle1.png" type="Texture" id=2]
+[ext_resource path="res://characters/assets/human/idle/human-idle2.png" type="Texture" id=3]
+[ext_resource path="res://characters/assets/human/out/human-out1.png" type="Texture" id=4]
+[ext_resource path="res://characters/assets/human/out/human-out2.png" type="Texture" id=5]
+[ext_resource path="res://characters/assets/human/out/human-out3.png" type="Texture" id=6]
+[ext_resource path="res://characters/assets/human/out/human-out4.png" type="Texture" id=7]
+[ext_resource path="res://characters/assets/human/out/human-out5.png" type="Texture" id=8]
+[ext_resource path="res://characters/assets/human/out/human-out6.png" type="Texture" id=9]
+[ext_resource path="res://characters/assets/human/out/human-out7.png" type="Texture" id=10]
+[ext_resource path="res://characters/assets/human/out/human-out8.png" type="Texture" id=11]
+[ext_resource path="res://characters/assets/human/walk/human-walk1.png" type="Texture" id=12]
+[ext_resource path="res://characters/assets/human/walk/human-walk2.png" type="Texture" id=13]
+[ext_resource path="res://characters/assets/human/walk/human-walk3.png" type="Texture" id=14]
+[ext_resource path="res://characters/assets/human/walk/human-walk4.png" type="Texture" id=15]
+[ext_resource path="res://characters/assets/human/walk/human-walk5.png" type="Texture" id=16]
+[ext_resource path="res://characters/assets/human/walk/human-walk6.png" type="Texture" id=17]
+[ext_resource path="res://characters/assets/human/walk/human-walk7.png" type="Texture" id=18]
+[ext_resource path="res://characters/assets/human/walk/human-walk8.png" type="Texture" id=19]
+[ext_resource path="res://characters/assets/human/fall/human-fall1.png" type="Texture" id=20]
+[ext_resource path="res://characters/assets/human/fall/human-fall2.png" type="Texture" id=21]
+[ext_resource path="res://characters/assets/human/jump/human-jump1.png" type="Texture" id=22]
+[ext_resource path="res://characters/assets/human/jump/human-jump2.png" type="Texture" id=23]
+[ext_resource path="res://characters/assets/human/jump/human-jump3.png" type="Texture" id=24]
 [ext_resource path="res://assets/ui/progress1.png" type="Texture" id=25]
 [ext_resource path="res://assets/ui/progress2.png" type="Texture" id=26]
 
@@ -40,48 +40,98 @@ extents = Vector2( 8, 16 )
 [sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "walk",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
-"loop": true,
-"name": "die",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
-"loop": false,
-"name": "jump",
-"speed": 16.0
-}, {
-"frames": [ ExtResource( 23 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "idle",
 "speed": 3.0
 }, {
-"frames": [ ExtResource( 12 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": false,
 "name": "in",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": false,
 "name": "out",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "walk",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "die",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"loop": false,
+"name": "jump",
+"speed": 16.0
 } ]
 
-[node name="Human" type="KinematicBody2D"]
+[sub_resource type="Animation" id=4]
+
+resource_name = "default"
+length = 0.01
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("ProgressBar:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "progress"
+length = 0.6
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("ProgressBar:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ProgressBar:value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 100.0 ]
+}
+
+[node name="Human" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -121,7 +171,25 @@ _sections_unfolded = [ "Material", "Transform", "Z Index" ]
 frames = SubResource( 3 )
 animation = "idle"
 
-[node name="ProgressBar" type="TextureProgress" parent="." index="3"]
+[node name="DelayTimer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 0.18
+one_shot = true
+autostart = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/default = SubResource( 4 )
+anims/progress = SubResource( 5 )
+blend_times = [  ]
+
+[node name="ProgressBar" type="TextureProgress" parent="." index="5"]
 
 visible = false
 anchor_left = 0.0
@@ -151,6 +219,7 @@ texture_progress = ExtResource( 26 )
 radial_fill_degrees = 360.0
 radial_center_offset = Vector2( 0, 0 )
 nine_patch_stretch = false
+_sections_unfolded = [ "Visibility" ]
 
 [connection signal="area_entered" from="ObjectDetection" to="." method="_on_ObjectDetection_area_entered"]
 
@@ -161,5 +230,9 @@ nine_patch_stretch = false
 [connection signal="body_exited" from="ObjectDetection" to="." method="_on_ObjectDetection_body_exited"]
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+
+[connection signal="timeout" from="DelayTimer" to="." method="_on_DelayTimer_timeout"]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
 
