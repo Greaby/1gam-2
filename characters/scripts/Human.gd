@@ -141,7 +141,8 @@ func _on_AnimatedSprite_animation_finished():
 		queue_free()
 
 func _on_ObjectDetection_area_entered(area):
-	available_object = area
+	if area.collision_layer == 16:
+		available_object = area
 
 func _on_ObjectDetection_area_exited(area):
 	available_object = null

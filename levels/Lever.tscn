@@ -31,9 +31,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 13, 16 )
+extents = Vector2( 5, 10 )
 
-[node name="Lever" type="Area2D" index="0"]
+[node name="Lever" type="Area2D"]
 
 input_pickable = false
 gravity_vec = Vector2( 0, 1 )
@@ -44,7 +44,7 @@ collision_layer = 16
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Pickable" ]
 state = 1
 
 [node name="Outiline" type="Polygon2D" parent="." index="0"]
