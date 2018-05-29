@@ -15,13 +15,17 @@ func _ready():
 func _change_state(new_state):
 	state = new_state
 	
-	#$Tween.stop($".", "transform/position")
+	$Tween.stop($".", "position")
 	
 	match state:
 		TOP:
-			$Tween.interpolate_property($".", "transform/origin", position, top, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			var total_move = bottom.y - top.y
+			var move_left = position.y - top.y
+			$Tween.interpolate_property($".", "position", position, top, move_left / total_move, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		BOTTOM:
-			$Tween.interpolate_property($".", "transform/origin", position, bottom, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			var total_move = bottom.y - top.y
+			var move_left = total_move - (position.y - top.y)
+			$Tween.interpolate_property($".", "position", position, bottom, move_left / total_move, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 			
 	$Tween.start()
 

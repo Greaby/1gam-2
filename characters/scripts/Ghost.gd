@@ -77,7 +77,8 @@ func out(host):
 	_change_state(OUT_HOST)
 
 func _on_Area2D_body_entered(host):
-	available_host = host
+	if host.collision_layer == 1:
+		available_host = host
 	
 func _on_Area2D_body_exited(host):
 	available_host = null
