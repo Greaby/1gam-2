@@ -33,7 +33,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 5, 10 )
 
-[node name="Lever" type="Area2D"]
+[node name="Lever" type="Area2D" index="0"]
 
 input_pickable = false
 gravity_vec = Vector2( 0, 1 )

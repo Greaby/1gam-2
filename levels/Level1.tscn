@@ -7,7 +7,7 @@
 [ext_resource path="res://characters/Human.tscn" type="PackedScene" id=5]
 [ext_resource path="res://characters/Ghost.tscn" type="PackedScene" id=6]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 human_required = 1

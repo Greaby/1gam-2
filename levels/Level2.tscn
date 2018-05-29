@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://levels/scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://tileset/World.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://characters/Human.tscn" type="PackedScene" id=6]
 [ext_resource path="res://characters/Life.tscn" type="PackedScene" id=7]
 [ext_resource path="res://characters/Ghost.tscn" type="PackedScene" id=8]
+[ext_resource path="res://objects/Plateform.tscn" type="PackedScene" id=9]
 
 [node name="Level2" type="Node2D" index="0"]
 
@@ -64,8 +65,6 @@ position = Vector2( 960, 544 )
 
 [node name="Levers" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
-
 [node name="Lever" parent="Levers" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 619, 544 )
@@ -111,7 +110,31 @@ position = Vector2( 1, -25 )
 
 [node name="Ghost" parent="." index="5" instance=ExtResource( 8 )]
 
+visible = false
 position = Vector2( 144, 128 )
 collision_mask = 8
+
+[node name="Plateform" parent="." index="6" instance=ExtResource( 9 )]
+
+position = Vector2( 256, 544 )
+_sections_unfolded = [ "Transform" ]
+top = Vector2( 256, 192 )
+bottom = Vector2( 256, 544 )
+state = 1
+
+[node name="Plateform2" parent="." index="7" instance=ExtResource( 9 )]
+
+position = Vector2( 768, 192 )
+_sections_unfolded = [ "Transform" ]
+top = Vector2( 768, 192 )
+bottom = Vector2( 768, 544 )
+
+[connection signal="off" from="Levers/Lever" to="Plateform" method="activate"]
+
+[connection signal="on" from="Levers/Lever" to="Plateform" method="activate"]
+
+[connection signal="off" from="Levers/Lever2" to="Plateform2" method="activate"]
+
+[connection signal="on" from="Levers/Lever2" to="Plateform2" method="activate"]
 
 
