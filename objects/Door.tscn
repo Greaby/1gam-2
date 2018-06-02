@@ -1,14 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://objects/scripts/Plateform.gd" type="Script" id=1]
-
+[ext_resource path="res://objects/scripts/Door.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 64, 16 )
+extents = Vector2( 16, 32 )
 
-[node name="Plateform" type="KinematicBody2D"]
+[node name="Door" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -21,7 +20,7 @@ state = null
 
 [node name="Polygon2D" type="Polygon2D" parent="." index="0"]
 
-polygon = PoolVector2Array( -64, -16, 64, -16, 64, 16, -64, 16 )
+polygon = PoolVector2Array( -16, -32, 16, -32, 16, 32, -16, 32 )
 uv = PoolVector2Array(  )
 color = Color( 1, 1, 1, 1 )
 vertex_colors = PoolColorArray(  )
