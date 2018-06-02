@@ -8,6 +8,7 @@ func _ready():
 	levels.append("res://levels/Level1.tscn")
 	levels.append("res://levels/Level2.tscn")
 	levels.append("res://levels/Level3.tscn")
+	levels.append("res://levels/End.tscn")
 
 	_load_next_level()
 	

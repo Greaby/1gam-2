@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
-[ext_resource path="res://Menu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://levels/assets/PM_FN_Music_SeamlessLoop_1J.wav" type="AudioStream" id=2]
+[ext_resource path="res://levels/assets/PM_FN_Music_SeamlessLoop_1A.wav" type="AudioStream" id=3]
+[ext_resource path="res://Menu.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=1]
 
@@ -96,11 +98,14 @@ tracks/1/keys = {
 "values": [ -15.0, -80.0 ]
 }
 
-[node name="Main" type="Node" index="0"]
+[node name="Main" type="Node"]
 
 pause_mode = 2
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
+__meta__ = {
+"_edit_vertical_guides_": [ 512.041 ]
+}
 
 [node name="Level" type="Node2D" parent="." index="0"]
 
@@ -121,7 +126,7 @@ blend_times = [  ]
 
 [node name="WorldBackground" type="AudioStreamPlayer" parent="." index="2"]
 
-stream = null
+stream = ExtResource( 2 )
 volume_db = -15.0
 autoplay = true
 mix_target = 0
@@ -129,13 +134,13 @@ bus = "Master"
 
 [node name="UnderworldBackground" type="AudioStreamPlayer" parent="." index="3"]
 
-stream = null
+stream = ExtResource( 3 )
 volume_db = -80.0
 autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="Menu" parent="." index="4" instance=ExtResource( 2 )]
+[node name="Menu" parent="." index="4" instance=ExtResource( 4 )]
 
 pause_mode = 2
 visible = false

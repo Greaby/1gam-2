@@ -63,6 +63,8 @@ position = Vector2( 64, 544 )
 
 [node name="Levers" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
+
 [node name="Lever" parent="Levers" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 619, 544 )
@@ -103,21 +105,14 @@ position = Vector2( 1, 0 )
 
 [node name="Human" parent="Humans" index="0" instance=ExtResource( 8 )]
 
-editor/display_folded = true
 position = Vector2( 63, 128 )
 is_possessed = true
 
 [node name="Lives" type="Node2D" parent="Humans/Human" index="3"]
 
+editor/display_folded = true
+
 [node name="Life" parent="Humans/Human/Lives" index="0" instance=ExtResource( 9 )]
-
-position = Vector2( 1, -25 )
-
-[node name="Life2" parent="Humans/Human/Lives" index="1" instance=ExtResource( 9 )]
-
-position = Vector2( 1, -25 )
-
-[node name="Life3" parent="Humans/Human/Lives" index="2" instance=ExtResource( 9 )]
 
 position = Vector2( 1, -25 )
 
@@ -127,6 +122,7 @@ position = Vector2( 959, 128 )
 
 [node name="Lives" type="Node2D" parent="Humans/Human2" index="3"]
 
+editor/display_folded = true
 position = Vector2( 0, 1 )
 __meta__ = {
 "_edit_group_": true
@@ -136,13 +132,26 @@ __meta__ = {
 
 position = Vector2( 1, -25 )
 
-[node name="Life2" parent="Humans/Human2/Lives" index="1" instance=ExtResource( 9 )]
+[node name="Label" type="Label" parent="." index="8"]
 
-position = Vector2( 1, -25 )
-
-[node name="Life3" parent="Humans/Human2/Lives" index="2" instance=ExtResource( 9 )]
-
-position = Vector2( 1, -25 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 471.0
+margin_top = 384.0
+margin_right = 554.0
+margin_bottom = 398.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Limited lives"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [connection signal="off" from="Levers/Lever" to="Plateform" method="activate"]
 
