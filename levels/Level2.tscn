@@ -10,7 +10,7 @@
 [ext_resource path="res://characters/Human.tscn" type="PackedScene" id=8]
 [ext_resource path="res://characters/Life.tscn" type="PackedScene" id=9]
 
-[node name="Level2" type="Node2D" index="0"]
+[node name="Level2" type="Node2D"]
 
 script = ExtResource( 1 )
 human_required = 2
@@ -138,9 +138,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 471.0
+margin_left = 427.0
 margin_top = 384.0
-margin_right = 554.0
+margin_right = 598.0
 margin_bottom = 398.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -148,7 +148,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Limited lives"
+text = "Humans have limited lives"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

@@ -22,13 +22,13 @@ func _process(delta):
 
 func _load_next_level():
 	if levels.size() > 0:
-		for child in $Level.get_children():
-			child.queue_free()
-		
 		current_scene = load(levels.pop_front())
 		_load_level(current_scene)
 		
 func _load_level(scene):
+	for child in $Level.get_children():
+		child.queue_free()
+	
 	var current_level = scene.instance()
 		
 	$Level.add_child(current_level)
